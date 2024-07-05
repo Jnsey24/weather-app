@@ -7,7 +7,7 @@ const Weather = () => {
 
   const fetchWeather = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/weather?city=${city}`);
+      const response = await axios.get(`http://localhost:3000/weather?city=${city}`);
       setWeather(response.data);
     } catch (error) {
       console.error(error);
