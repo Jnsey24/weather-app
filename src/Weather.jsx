@@ -27,8 +27,13 @@ const Weather = () => {
       {weather && (
         <div>
           <h2>{weather.name}</h2>
-          <p>{weather.weather[0].description}</p>
-          <p>{Math.round(weather.main.temp - 273.15)}°C</p>
+          <p>Temperature: {Math.round(weather.main.temp - 273.15)}°C</p>
+          <p>Feels Like: {Math.round(weather.main.feels_like - 273.15)}°C</p>
+          <p>Humidity: {weather.main.humidity}%</p>
+          <p>Visibility: {weather.visibility} meters</p>
+          <p>Wind Speed: {weather.wind.speed} m/s</p>
+          <p>Sunrise: {new Date(weather.sys.sunrise * 1000).toLocaleTimeString()}</p>
+          <p>Sunset: {new Date(weather.sys.sunset * 1000).toLocaleTimeString()}</p>
         </div>
       )}
     </div>
