@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import WeatherIcon from 'react-icons-weather';
 import { WiSunrise, WiSunset, WiThermometer, WiStrongWind } from 'react-icons/wi';
-import './Weather.css';
 
 const Weather = () => {
   const [city, setCity] = useState('');
